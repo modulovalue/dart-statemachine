@@ -72,6 +72,9 @@ class State {
     machine.current = this;
   }
 
+  /// Returns true when the machine this state belongs to is in this state.
+  bool get isCurrent => machine.current == this;
+
   /// Returns a debug string of this state.
   @override
   String toString() => name == null ? super.toString() : 'State[$name]';

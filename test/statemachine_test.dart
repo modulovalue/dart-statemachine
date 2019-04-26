@@ -156,6 +156,8 @@ void main() {
     expect(machine.current, isNull);
     machine.start();
     expect(machine.current, startState);
+    expect(startState.isCurrent, true);
+    expect(stopState.isCurrent, false);
     machine.stop();
     expect(machine.current, stopState);
   });
